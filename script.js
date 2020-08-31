@@ -19,7 +19,9 @@ const words = [
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = ["m"];
+console.log(selectedWord);
+
+const correctLetters = [];
 const wrongLetters = [];
 
 // Show hidden word
@@ -37,10 +39,14 @@ function displayWord() {
       .join("")}
   `;
 
-  console.log(wordEl.innerText);
+  const innerWord = wordEl.innerText.replace(/\n/g, "");
 
   if (innerWord === selectedWord) {
     finalMessage.innerText = "GG YOU WON";
     popup.style.display = "flex";
   }
 }
+
+// Keydown letter press
+window.addEventListener("keydown", (e) => {});
+displayWord();

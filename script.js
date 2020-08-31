@@ -70,7 +70,7 @@ function updateWrongLettersEl() {
 
   // Loss Check
   if (wrongLetters.length === figureParts.length) {
-    finalMessage.innerText = "Defeat";
+    finalMessage.innerText = "You lost but GG";
     popup.style.display = "flex";
   }
 }
